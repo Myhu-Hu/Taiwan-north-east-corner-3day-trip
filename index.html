@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣東北角深度旅遊行程</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定 Inter 字體 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* 輕微的背景色，作為備用 */
+            overflow-x: hidden; /* 防止水平滾動 */
+            position: relative; /* 為了偽元素定位 */
+        }
+
+        /* 吉卜力風格動態背景 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* 確保在內容下方 */
+            /* 使用多個徑向漸變模擬雲朵或光線的柔和移動 */
+            background: radial-gradient(circle at 20% 80%, rgba(173, 216, 230, 0.3) 0%, transparent 50%), /* 淺藍色 */
+                        radial-gradient(circle at 80% 20%, rgba(255, 250, 205, 0.3) 0%, transparent 50%), /* 淺黃色 */
+                        radial-gradient(circle at 50% 50%, rgba(224, 255, 255, 0.3) 0%, transparent 50%); /* 淺青色 */
+            background-size: 300% 300%; /* 讓漸變比視窗大，以便動畫移動 */
+            animation: ghibliBackground 30s ease infinite alternate; /* 緩慢、輕柔的動畫 */
+        }
+
+        @keyframes ghibliBackground {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        /* 自訂樣式，確保圓角和間距 */
+        section {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* 圓角 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+            margin-bottom: 2rem; /* 增加區塊間距 */
+        }
+        h2 {
+            color: #2d3748; /* 深灰色標題 */
+            font-size: 1.875rem; /* h2 字體大小 */
+            font-weight: 700; /* 粗體 */
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #edf2f7; /* 底部邊線 */
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            color: #4a5568; /* 中等灰色標題 */
+            font-size: 1.5rem; /* h3 字體大小 */
+            font-weight: 600; /* 半粗體 */
+            margin-bottom: 0.75rem;
+        }
+        ul {
+            list-style-type: none; /* 移除預設列表點 */
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        li::before {
+            content: '•'; /* 自訂列表點 */
+            color: #4299e1; /* 藍色點 */
+            position: absolute;
+            left: 0;
+        }
+        strong {
+            color: #2b6cb0; /* 深藍色粗體 */
+        }
+        hr {
+            border-top: 1px solid #e2e8f0; /* 分隔線顏色 */
+            margin-bottom: 2rem;
+        }
+        iframe {
+            border-radius: 0.75rem; /* iframe 圓角 */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="container mx-auto max-w-4xl">
+        <header class="text-center mb-8 p-8 rounded-xl bg-cover bg-center"
+                style="background-image: url(https://1drv.ms/i/c/3509AFB8FC070859/IQT99b9YeadoQLkITALDp-5xAVLDfQEjConSDD1SMLhM_rk?width=1024&height=474);">
+            <h1 class="text-4xl font-extrabold text-gray-800 mb-2" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.7);">台灣東北角深度旅遊</h1>
+            <p class="text-lg text-gray-700" style="text-shadow: 1px 1px 3px rgba(255,255,255,0.7);">三天兩夜戴家專屬行程</p>
+        </header>
+
+        <!-- 行程總覽 -->
+        <section id="overview">
+            <h2>行程總覽</h2>
+            <p class="text-gray-700 leading-relaxed">這是一趟為期三天兩夜，專為戴家設計的台灣東北角深度旅遊。行程將從充滿懷舊氣息的瑞芳山城出發，深度探索金瓜石的礦山文化，再前往基隆港都感受夜市魅力，最後在藝術氣息濃厚的鶯歌陶瓷老街畫下完美句點。此網頁將提供您詳細的景點介紹、美食推薦、住宿資訊與交通方式，讓您能輕鬆愜意地享受這趟旅程。</p>
+            <p class="text-gray-700 leading-relaxed mt-4">本次行程可依賴大眾運輸工具，並在瑞芳、基隆等地區搭配租車，以增加行程彈性與便捷性。詳細交通建議已融入每日行程規劃中。</p>
+        </section>
+
+        <hr>
+
+        <!-- 每日行程 -->
+        <section id="daily-itinerary">
+            <h2>每日行程</h2>
+
+            <div class="day-plan mb-6">
+                <h3>Day 1 (8/9): 九份山城探險</h3>
+                <ul class="text-gray-700">
+                    <li><strong>上午：</strong>從台南搭乘高鐵或台鐵至台北車站，再轉乘台鐵至瑞芳車站。</li>
+                    <li><strong>下午：</strong>抵達瑞芳後，建議可採租車方式前往<strong>九份老街</strong>，感受山城越夜越美麗的獨特氛圍，品嚐芋圓、草仔粿等在地小吃。入住「九份 緣憶」民宿，稍作休息。</li>
+                    <li><strong>晚上：</strong>漫步於掛滿紅色燈籠的街道，或找間茶坊，欣賞九份的夜景。</li>
+                </ul>
+            </div>
+
+            <div class="day-plan mb-6">
+                <h3>Day 2 (8/10): 金瓜石礦山巡禮 & 基隆港都夜色</h3>
+                <ul class="text-gray-700">
+                    <li><strong>上午：</strong>建議可採租車方式前往金瓜石，參觀<strong>黃金博物館</strong>、體驗坑道文化，並前往<strong>黃金瀑布</strong>欣賞奇特景觀。若體力許可，可挑戰<strong>報時山步道</strong>，俯瞰陰陽海的壯麗景色。</li>
+                    <li><strong>下午：</strong>從金瓜石駕車前往基隆，並至「享住新大華館」辦理入住。基隆當地景點間的移動，亦可考慮租車以提高便捷性。</li>
+                    <li><strong>晚上：</strong>前往熱鬧的<strong>基隆廟口夜市</strong>，品嚐各式道地小吃，如天婦羅、鼎邊趖、營養三明治等。</li>
+                </ul>
+            </div>
+
+            <div class="day-plan">
+                <h3>Day 3 (8/11): 鶯歌陶藝巡禮 & 快樂歸途</h3>
+                <ul class="text-gray-700">
+                    <li><strong>上午：</strong>從基隆搭乘台鐵或客運前往鶯歌，逛逛<strong>鶯歌陶瓷老街</strong>，體驗手拉坏的樂趣，或是在特色小店尋寶。</li>
+                    <li><strong>下午：</strong>帶著滿滿的回憶，從鶯歌車站搭乘台鐵返回台南。</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 美食推薦 -->
+        <section id="food">
+            <h2>美食推薦</h2>
+            <ul class="text-gray-700">
+                <li><strong>瑞芳／九份：</strong>除了九份老街的芋圓和草仔粿，瑞芳市區的美食廣場內也有許多在地小吃。</li>
+                <li><strong>基隆：</strong>基隆廟口夜市是美食的一級戰區，推薦阿華炒麵、三明治、阿本燒賣等。</li>
+                <li><strong>鶯歌：：</strong>鶯歌老街上的厚道飲食店以古早味排骨飯聞名，另外阿婆壽司、彰鶯肉圓也是不容錯過的在地小吃。</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 住宿資訊 -->
+        <section id="accommodation">
+            <h2>住宿資訊</h2>
+            <ul class="text-gray-700">
+                <li><strong>九份 緣憶：</strong>位於九份老街附近，提供舒適的住宿環境，方便您體驗山城的夜景。</li>
+                <li><strong>基隆 享住新大華館：</strong>位於基隆市區，鄰近廟口夜市，方便旅客品嚐在地美食。</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 行程參考地圖 -->
+        <section id="map">
+            <h2>行程參考地圖</h2>
+            <div class="relative" style="padding-bottom: 75%;"> <!-- 保持地圖的響應式比例 -->
+                <!-- 由於行程已大幅修改，此地圖可能不再完全適用，僅供參考。 -->
+                <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1ELNP4JDJ9q4iLiLQ87k89TP8Ztr_9s4&ehbc=2E312F"
+                        class="absolute top-0 left-0 w-full h-full"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="台灣東北角深度旅遊行程地圖">
+                </iframe>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
